@@ -1,4 +1,8 @@
 @extends('layouts.base')
+@section('styles')
+@parent
+<link href="{{asset('public/css/page.css')}}" rel="stylesheet">
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

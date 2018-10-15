@@ -11,7 +11,9 @@
         <!--[if lt IE 9]>
             <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+		@section('styles')
         <link href="{{asset('public/css/styles.css')}}" rel="stylesheet">
+		@show
     </head>
     <body>
 <nav class="navbar navbar-static">
@@ -24,8 +26,9 @@
     </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">  
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
+          <li><a href="{{asset('about')}}">About</a></li>
+          <li><a href="{{asset('delivery')}}">Delivery</a></li>
+		  <li><a href='{{asset('price')}}'>Price</a></li>
            @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -53,6 +56,7 @@
                                     </form>
                                 </div>
                             </li>
+							
                         @endguest
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Channels</a>
@@ -123,7 +127,7 @@
     <!-- script references -->
         <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> -->
         <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/scripts.js"></script>
+        <script src="{{asset('public/js/bootstrap.min.js')}}"</script>
+        <script src="{{asset('public/js/scripts.js')}}"</script>
     </body>
 </html>

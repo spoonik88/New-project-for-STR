@@ -28,7 +28,8 @@
         <ul class="nav navbar-nav">  
           <li><a href="{{asset('about')}}">About</a></li>
           <li><a href="{{asset('delivery')}}">Delivery</a></li>
-		  <li><a href='{{asset('price')}}'>Price</a></li>
+		  <li><a href="{{asset('price')}}">Price</a></li>
+      <li><a href="{{asset('category')}}">Products</a></li>  <!-- добавил раздел катигории -->
            @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -127,7 +128,7 @@
     <!-- script references -->
         <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> -->
         <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
-        <script src="{{asset('public/js/bootstrap.min.js')}}"</script>
-        <script src="{{asset('public/js/scripts.js')}}"</script>
+        <script src="{{asset('public/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('public/js/scripts.js')}}"></script>
     </body>
 </html>

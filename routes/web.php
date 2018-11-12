@@ -17,5 +17,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'BaseController@getIndex');
-
+Route::get('/category', 'TovarController@getAll');
+ Route::get('basket/add/{id}', 'BacketController@getAdd');
+ Route::get('basket', 'BacketController@getAll');
+Route::get('basket/delete/{id}', 'BacketController@getDelete');
 Route::get('/{url}', 'PageController@getIndex');
